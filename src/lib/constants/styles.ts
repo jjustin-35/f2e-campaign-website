@@ -13,11 +13,10 @@ export const device = {
 };
 
 export const colors = {
-	primary: '#1D3D6C',
-	secondary: '#D8B06C',
-	auxiliary: '#F5F4EF',
-	decorate_orange: '#FF9737',
-	decorate_yellow: '#FFE48B',
+	primary: '#4527A0',
+	secondary: '#26A69A',
+	auxiliary: '#FFB300',
+	decorate: '#EC407A',
 	white: '#FFFFFF',
 	black: '#000000',
 	text: '#3D3A35'
@@ -30,12 +29,12 @@ export const fontSizes = {
     md: '20px',
     lg: '24px',
     xl: '28px',
-    xxl: '32px',
-    xxxl: '40px'
+    xxl: '36px',
+    xxxl: '44px'
 };
 
 export const container = css`
-	max-width: 1080px;
+	max-width: 1200px;
 	margin: 0 auto;
 
 	@media ${device.tablet} {

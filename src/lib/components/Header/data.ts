@@ -1,52 +1,37 @@
 import type { ImageType } from '$lib/constants/types/global';
+import logo from '$lib/images/common/logo.svg';
 
 type ItemType = {
 	text: string;
-	link: string;
-};
-
-type SocialType = {
-	icon: ImageType;
-	link: string;
+	target: string;
 };
 
 type DataType = {
 	logo: ImageType;
 	menu: ItemType[];
-	social: SocialType[];
 };
 
 const data: DataType = {
 	logo: {
-		src: '/images/logo.svg',
+		src: logo,
 		alt: 'img-logo'
 	},
 	menu: [
 		{
-			text: 'Home',
-			link: '/'
+			text: '候選人主張',
+			target: 'proposal'
 		},
 		{
-			text: 'About',
-			link: '/about'
+			text: '最新活動',
+			target: 'activity'
 		},
 		{
-			text: 'Contact',
-			link: '/contact'
-		}
-	],
-	social: [
-		{
-			icon: { src: '', alt: 'ic-facebook' },
-			link: 'https://www.facebook.com/'
+			text: '政策議題',
+			target: 'issue'
 		},
 		{
-			icon: { src: '', alt: 'ic-twitter' },
-			link: 'https://twitter.com/'
-		},
-		{
-			icon: { src: '', alt: 'ic-instagram' },
-			link: 'https://www.instagram.com/'
+			text: '民眾服務信箱',
+			target: 'mailbox'
 		}
 	]
 };

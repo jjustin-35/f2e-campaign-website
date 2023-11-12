@@ -1,23 +1,30 @@
 <script lang="ts">
 	import { container } from '$lib/constants/styles';
-	import { header, wrapper, logo, menu } from './style';
+	import { header, wrapper, logo, menu, menuItem } from './style';
 	import data from './data';
+
+	export let activeBlock: string = data.menu[0].target;
+
+	const onMenuClick = (target: string) => {
+		const element = document.getElementById(target);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
 </script>
 
 <header class={header}>
 	<div class={container}>
 		<div class={wrapper}>
-			<img src="" alt="" class={logo} />
+			<img {...data.logo} class={logo} />
 			<nav class={menu}>
 				{#each data.menu as item}
-					<a href={item.link}>{item.text}</a>
-				{/each}
-			</nav>
-			<nav class={menu}>
-				{#each data.social as socialItem}
-					<a href={socialItem.link}>
-						<img {...socialItem.icon} />
-					</a>
+					<button
+						on:click={() => onMenuClick(item.target)}
+						class={menuItem({ isActive: activeBlock === item.target })}
+					>
+						{item.text}
+					</button>
 				{/each}
 			</nav>
 		</div>

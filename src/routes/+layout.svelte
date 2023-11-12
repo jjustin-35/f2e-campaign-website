@@ -1,6 +1,6 @@
 <script>
+	import './globalStyle';
 	import Header from '$lib/components/Header/index.svelte';
-	import './styles.css';
 </script>
 
 <div class="app">
