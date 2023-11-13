@@ -1,5 +1,5 @@
 <script>
-	import './globalStyle';
+	import './globalStyle.css';
 	import Header from '$lib/components/Header/index.svelte';
 </script>
 
