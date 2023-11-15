@@ -34,6 +34,7 @@ export const menuItem = ({ isActive }: { isActive: boolean }) => css`
 	transition: color 0.3s;
 	padding: 10px 0;
 	transition: border-bottom 0.3s;
+	border-bottom: 3px solid transparent;
 
 	${isActive &&
 	css`

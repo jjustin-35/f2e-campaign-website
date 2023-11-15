@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { container } from '$lib/constants/styles';
+	import Button from '$lib/components/Button/index.svelte';
 	import { header, wrapper, logo, menu, menuItem } from './style';
 	import data from './data';
 
@@ -11,6 +12,8 @@
 			element.scrollIntoView({ behavior: 'smooth' });
 		}
 	};
+
+	
 </script>
 
 <header class={header}>
@@ -26,6 +29,7 @@
 						{item.text}
 					</button>
 				{/each}
+				<Button {...data.button} onClick={() => onMenuClick('donate')} />
 			</nav>
 		</div>
 	</div>

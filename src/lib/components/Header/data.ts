@@ -1,4 +1,4 @@
-import type { ImageType } from '$lib/constants/types/global';
+import type { ImageType, ButtonType } from '$lib/constants/types/global';
 import logo from '$lib/images/common/logo.svg';
 
 type ItemType = {
@@ -9,6 +9,7 @@ type ItemType = {
 type DataType = {
 	logo: ImageType;
 	menu: ItemType[];
+	button: ButtonType;
 };
 
 const data: DataType = {
@@ -33,7 +34,13 @@ const data: DataType = {
 			text: '民眾服務信箱',
 			target: 'mailbox'
 		}
-	]
+	],
+	button: {
+		text: '小額捐款',
+		theme: 'primary',
+		size: 'md',
+		round: 'rounded'
+	}
 };
 
 export default data;
