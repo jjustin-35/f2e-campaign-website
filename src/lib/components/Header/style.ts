@@ -1,5 +1,5 @@
 import { css } from '@emotion/css';
-import { colors, fontSizes } from '../../constants/styles';
+import { colors, fontSizes, device } from '../../constants/styles';
 
 export const header = css`
 	background-color: ${colors.white};
@@ -19,12 +19,20 @@ export const wrapper = css`
 
 export const logo = css`
 	width: 194px;
+
+	@media ${device.mobile} {
+		width: 150px;
+	}
 `;
 
 export const menu = css`
 	display: flex;
 	align-items: center;
 	gap: 40px;
+
+	@media ${device.mobile} {
+		display: none;
+	}
 `;
 
 export const menuItem = ({ isActive }: { isActive: boolean }) => css`
